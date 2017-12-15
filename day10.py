@@ -30,9 +30,8 @@ def single_hash(lengths, pos, skip, a_list):
 
 
 def knot_hash(sequence):
-    _ascii = [int(ord(c)) for c in ",".join(str(x) for x in sequence)]
+    _ascii = [int(ord(c)) for c in sequence]
     _ascii.extend([17, 31, 73, 47, 23])
-    print(_ascii)
     sparse_hash, position, skip_size = list(range(256)), 0, 0
     for i in range(64):
         sparse_hash, position, skip_size, a_list = \
